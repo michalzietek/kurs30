@@ -1,0 +1,4 @@
+Cześć {imie},
+Wszystkiego najlepszego z okazji {rok} urodzin.
+Pozdrawiam,
+{autor}
