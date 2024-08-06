@@ -4,7 +4,7 @@
 # 1101 1100
 # 0000 0000
 #################################################################
-###### LISTY ############
+# LISTY ############
 # imie = "Michal"
 # wiek = 18
 # uczen_1 = "Michal"
@@ -86,28 +86,60 @@
 
 ##################################################################
 ############### słownik ##################################
-imie = "Michał"
-nazwisko = "Ziętkowski"
-wiek = 28
-plec = "mezczyzna"
-czlowiek = ["Michal", "Zietkowski", 17, "mezczyzna", None, "Szczecin"]
-czlowiek_dict = {
-    "imie": "Michal",
-    "nazwisko": "Zietkowski",
-    "wiek": 28,
-    "plec": "mezczyzna",
-    "miejsce_zamieszkania": "Szczecin"
-}
-print(czlowiek_dict)
-print(type(czlowiek_dict))
-print(czlowiek_dict["imie"])
-#print(czlowiek_dict["pesel"])
-print(czlowiek_dict.get("pesel", "123456789"))
-czlowiek_dict["pesel"] = "0000000000"
-print(czlowiek_dict.get("pesel", "123456789"))
-czlowiek_dict["pesel"] = "1111111111"
-print(czlowiek_dict.get("pesel", "123456789"))
-print(czlowiek_dict)
-del czlowiek_dict["pesel"]
-print(czlowiek_dict)
+# imie = "Michał"
+# nazwisko = "Ziętkowski"
+# wiek = 28
+# plec = "mezczyzna"
+# czlowiek = ["Michal", "Zietkowski", 17, "mezczyzna", None, "Szczecin"]
+# czlowiek_dict = {
+#     "imie": "Michal",
+#     "nazwisko": "Zietkowski",
+#     "wiek": 28,
+#     "plec": "mezczyzna",
+#     "miejsce_zamieszkania": "Szczecin"
+# }
+# print(czlowiek_dict)
+# print(type(czlowiek_dict))
+# print(czlowiek_dict["imie"])
+# #print(czlowiek_dict["pesel"])
+# print(czlowiek_dict.get("pesel", "123456789"))
+# czlowiek_dict["pesel"] = "0000000000"
+# print(czlowiek_dict.get("pesel", "123456789"))
+# czlowiek_dict["pesel"] = "1111111111"
+# print(czlowiek_dict.get("pesel", "123456789"))
+# print(czlowiek_dict)
+# del czlowiek_dict["pesel"]
+# print(czlowiek_dict)
+#
+# for czlowiek_key in czlowiek_dict:
+#     print(czlowiek_key)
+#
+# for klucz in czlowiek_dict.keys():
+#     print(klucz)
+#
+# for wartosc in czlowiek_dict.values():
+#     print(wartosc)
+#
+# for klucz, wartosc in czlowiek_dict.items():
+#     print(f"{klucz}: {wartosc}")
 
+# lista_uczniow = ["Michal", "Jacek", "Tomek"]
+# print(id(lista_uczniow))
+# lista_uczniow.append("Kasia")
+# print(id(lista_uczniow))
+# imie = "Michal"
+# print(id(imie))
+# imie_2 = "TOmek"
+# print(id(imie))
+#
+# lista_uczniow = [imie, imie_2]
+# print(id(lista_uczniow[0]))
+# print(id(lista_uczniow[1]))
+# print(lista_uczniow)
+# imie = "Paulina"
+# lista_uczniow[0] = "Paulina"
+# print(id(imie))
+# print(id(lista_uczniow[0]))
+# print(id(lista_uczniow[1]))
+# print(lista_uczniow)
+# lista_uczniow_poprawna = ["Michal", "Tomek"]
