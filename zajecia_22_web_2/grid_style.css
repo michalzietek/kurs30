@@ -1,0 +1,25 @@
+#table{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    height: 1000px;
+    justify-content: stretch;
+}
+
+#row1{
+    background: #2eabb0;
+}
+
+#row2{
+    background: #009900;
+}
+
+#row3{
+    background: red;
+}
+
+h1{
+        border: 1px solid black;
+}

@@ -1,0 +1,19 @@
+
+#navigation{
+    /*height: 500px;*/
+    display: flex;
+    justify-content: space-around;
+    /*align-content: flex-end;*/
+    /*align-items: flex-end;*/
+}
+
+#nav-links{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    order: 0;
+}
+
+#logo{
+    order: 1;
+}

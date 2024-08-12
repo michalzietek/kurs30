@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+    .header-class, .footer {
+        background-color: #1dac95;
+        padding: 15px;
+    }
+
+    .main-content {
+        display: flex;
+    }
+
+    .sidebar {
+        background-color: red;
+        padding: 20px;
+    }
+
+    .section-class {
+        background: yellow;
+        padding: 20px;
+    }
+}
+
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+}
+
+    .sidebar {
+        background-color: red;
+        padding: 20px;
+    }
+
+    .section-class {
+        background: yellow;
+        padding: 20px;
+    }
+    .header-class, .footer {
+        background-color: #1dac95;
+        padding: 15px;
+    }
