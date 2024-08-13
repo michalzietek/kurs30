@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stworzenie użytkownika</title>
+</head>
+<body>
+        <a href="{{url_for('show_users')}}">Wróc do listy użytkowników</a>
+        <form method="POST">
+            <div style="display: flex; flex-direction: column;">
+                <label>Imię: </label>
+                <input type="text" name="name" placeholder="Podaj imię">
+                <label>Nazwisko: </label>
+                <input type="text" name="surname" placeholder="Podaj nazwisko">
+                <label>Email: </label>
+                <input type="text" name="email" placeholder="Podaj adres email: ">
+                <button type="submit">Dodaj użytkownika</button>
+            </div>
+        </form>
+
+</body>
+</html>

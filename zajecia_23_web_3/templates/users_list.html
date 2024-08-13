@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table style="border: 1px solid black">
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Adres email</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>To są twoi użytkownicy</h1>
+    <button>
+        <a href="/users/create">
+        Dodaj użytkownika
+        </a>
+    </button>
+
+    <button>
+        <a href="{{url_for('create_user')}}">
+            Nowy przycisk dodania
+        </a>
+    </button>
+
+
+
+</body>
+</html>

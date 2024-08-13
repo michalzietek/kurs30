@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST">
+        <label>Imie: </label>
+        <input type="text" name="imie">
+        <label>Nazwisko: </label>
+        <input type="hidden" name="form_type" value="name">
+        <input type="text" name="nazwisko">
+        <button type="submit">Zatwierdz</button>
+    </form>
+    <br />
+    <form method="POST">
+        <label>Użytkownik: </label>
+        <input type="text" name="user">
+        <input type="hidden" name="form_type" value="username">
+        <label>Hasło: </label>
+        <input type="password" name="password">
+        <button type="submit">Zatwierdź</button>
+    </form>
+</body>
+</html>
