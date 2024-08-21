@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ksiegarnia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Ksiegarnia u Michała</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav justify-content-end">
+        <a class="nav-link" aria-current="page" href="#">Lista książek</a>
+        <a class="nav-link" href="#">Formularz zakupu</a>
+        <a class="nav-link" href="#">Formularz sprzedaży</a>
+        <a class="nav-link" href="#">Zmiana salda</a>
+      </div>
+    </div>
+    <div>
+        <h4>{{ saldo }}</h4>
+    </div>
+  </div>
+</nav>
+<br/>
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Tytuł</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Rok wydania</th>
+      <th scope="col">Ilość stron</th>
+      <th scope="col">Numer ISBN</th>
+      <th scope="col">Ilość dostępnych książek</th>
+      <th scope="col">Ilość książek</th>
+      <th scope="col">Cena</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    {% for ksiazka in ksiegozbior %}
+        <tr>
+          <td>{{ ksiazka.tytul }}</td>
+          <td>{{ ksiazka.autor }}</td>
+          <td>{{ ksiazka.rok_wydania }}</td>
+          <td>{{ ksiazka.ilosc_stron }}</td>
+          <td>{{ ksiazka.numer_ISBN }}</td>
+          <td>{{ ksiazka.ilosc_dostepnych_ksiazek }}</td>
+          <td>{{ ksiazka.ilosc_ksiazek }}</td>
+          <td>{{ ksiazka.cena_wypozyczenia }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="d-flex justify-content-between p-5">
+    <form method="POST">
+        <h4>Formularz sprzedaży</h4>
+        <div class="border-top pt-2">
+        <div class="mb-3">
+            <input type="hidden" name="form_type" value="sale">
+            <label class="form-label">Numer ISBN</label>
+            <input type="number" class="form-control" name="isbn_number" aria-describedby="isbn-help">
+            <div id="isbn-help" class="form-text">Podaj numer ISBN książki, którą chcesz wypożyczyć.</div>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <form method="POST">
+        <h4>Formularz zmiany salda</h4>
+        <div class="border-top pt-2">
+        <div class="mb-3">
+            <label class="form-label">Kwota</label>
+            <input type="number" class="form-control" name="kwota" aria-describedby="kwota-help">
+            <input type="hidden" name="form_type" value="change_saldo">
+            <div id="kwota-help" class="form-text">Podaj kwotę, o którą chcesz zmienić saldo.</div>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <form method="POST">
+        <h4>Formularz zakupu książki</h4>
+        <div class="border-top pt-2">
+        <div class="mb-3">
+            <input type="hidden" name="form_type" value="buy">
+            <label class="form-label">Tytuł</label>
+            <input type="text" class="form-control" name="tytul">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" name="autor">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rok wydania</label>
+            <input type="number" class="form-control" name="rok_wydania">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ilość stron</label>
+            <input type="number" class="form-control" name="ilosc_stron">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Numer ISBN</label>
+            <input type="text" class="form-control" name="numer_ISBN">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ilość książek</label>
+            <input type="number" class="form-control" name="ilosc_ksiazek">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Cena zakupu</label>
+            <input type="number" class="form-control" name="cena_zakupu">
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+
+</body>
+</html>
